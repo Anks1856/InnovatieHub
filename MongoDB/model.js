@@ -11,6 +11,6 @@ mongoose.connect("mongodb://localhost/InnovativeHub").then(result =>{
 
 const User = mongoose.model('User' , schema.userSchema);
 const Contact = mongoose.model('Contact' , schema.contactSchema);
+const Idea = mongoose.model('Idea', schema.ideaSchema);
 
-
-module.exports = {User , Contact};
+module.exports = {User , Contact , Idea};
