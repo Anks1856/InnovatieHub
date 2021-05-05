@@ -1,0 +1,199 @@
+body{
+    font-family: 'RocknRoll One', sans-serif;
+
+}
+
+#header div.container {
+	position: relative;
+}
+#navbarSupportedContent {
+	position: absolute;
+	right: 0;
+}
+
+#SocialIcon{
+    font-size: 20px;
+    text-align: end;
+}
+#hub{
+    color: brown;
+}
+#header ul li a{
+    color: aqua;
+    font-size: 25px;
+    margin-left: 20px;
+}
+#header .navbar {
+    position: fixed;
+    width: 100%;
+}
+#HeaderName{
+    font-size: 100px;
+    text-align: center;
+}
+
+.card {
+	margin: 0 50px;
+}
+
+.card .post-image {
+    width: 450px;
+    height:460px;
+}
+
+
+
+#carouselExampleIndicators {
+	width: 80%;
+	margin: auto;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 150px;
+	width: 50px;
+	outline: black;
+    background-color: rgba(227, 227, 241, 0.3);
+    background-size: 100%, 100%;
+    border: 1px solid black;
+}
+
+.cara_img {
+	height: 400px;
+	width: 90%;
+	margin: auto;
+}
+
+.post-img {
+	height: 600px;
+}
+#post_btn input[type=radio] {
+    display: none
+}
+#post_btn label {
+    color: #bbb;
+    font-size: 25px;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+#post_btn {
+    display: inline-block;
+    padding-left: 70%;
+    cursor: pointer;
+}
+#post_btn label:hover,
+#post_btn input[type=radio]:checked {
+    color: red;
+}
+div #post_btn a.td{
+    color: #bbb;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+#post_btn a:nth-child(1):hover,
+#post_btn a:nth-child(1):checked {
+    color: red;
+}
+.td {
+    text-decoration: none;
+}
+
+/* Profiel Dropdown */
+.dropdown-menu {
+	padding: 20px 0;
+	border: none;
+	-webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.08);
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.08);
+	z-index: 4;
+}
+
+.dropdown a.dropdown-item {
+	margin: 0;
+	color: #333333;
+	text-transform: capitalize;
+	background-color: #000;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 30px;
+	padding: 0 50px 0 0px;
+} 
+
+.dropdown a.dropdown-item:hover, .dropdown a.dropdown-item:focus {
+	margin: 0;
+	color: #fff;
+	background-color: #fff;
+	-webkit-transition: all .3s linear;
+	transition: all .3s linear;
+}
+
+.dropdown a.logout-btn {
+	color: #6255a5;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+/*==============================
+|	|	|	footer
+================================*/
+
+footer .container-fluid{
+	width: 1440px;
+}
+
+footer .content-box-lg {
+	border-top: 2px solid #d1d1d1;
+	padding: 40px 0;
+	margin-top: 50px;
+}
+
+footer p.pera {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	padding-top: 10px;
+}
+
+/* Social Icons */
+
+ul.social-list {
+	padding: 0;
+	margin: 0;
+	float: right;
+}
+
+ul.social-list li {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	margin: auto 5px;
+}
+
+ul.social-list li a {
+	border: 1px solid #6255a5;
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
+	color: #fff;
+	background-color: #6255a5;
+	border-radius: 50%;
+	-webkit-transition: all .4s linear;
+	transition: all .4s linear;
+	text-align: center;
+}
+
+ul.social-list li:nth-child(1) a:hover {
+	background-color: #3b5998;
+	border-color: transparent;
+}
+
+ul.social-list li:nth-child(2) a:hover {
+	background-color: #00aced;
+	border-color: transparent;
+}
+
+ul.social-list li:nth-child(3) a:hover {
+	background-color: #0077b5;
+	border-color: transparent;
+}
