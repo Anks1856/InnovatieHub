@@ -1,24 +1,26 @@
 const express = require('express');
 const app = express();
-const bodyParser = require("body-parser");
 const router = express.Router();
 const model = require('../../MongoDB/model');
+// app.use(express.json());
 
 
+var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 
-router.get('/' , (req , res , next)=>{
-    // console.log(req.body);
-    model.Idea.find(req.body)
-    .then(result =>{
+router.post('/' , (req , res , next)=>{
+    console.log(req.body);
+    const contact = new model.Idea(req.body);
+    contact.save().then(result =>{
         console.log(result);
-        res.render('search-ideas');
+        res.redirect('/');
         next();
     }).catch(err =>{
         console.log(err);
         res.send('please try again');
     });
-    
+    // res.send('contact logic here!');
+    // next();
 });
 
 

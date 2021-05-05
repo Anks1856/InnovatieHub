@@ -8,6 +8,11 @@ const model = require('../../MongoDB/model');
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 
+router.get('/' , (req , res , next)=>{
+
+    res.render('contact-us');
+});
+
 router.post('/' , (req , res , next)=>{
     console.log(req.body);
     const contact = new model.Contact(req.body);

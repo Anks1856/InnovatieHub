@@ -16,17 +16,18 @@ const contactSchema = new mongoose.Schema({
 
 const ideaSchema = new mongoose.Schema({
     title : String,
-    catagory : String ,
     displayPic : {
         data : Buffer , 
         contentType : String   
     },
+    category : String ,
+    
     video : String ,
     description : String ,
-    sellable : String ,
+    sellable : Boolean ,
     sellPrice : Number ,
-    AccountNumber : String ,
     BankName : String ,
+    AccountNumber : String ,
     IFSCcode : String
 
 })

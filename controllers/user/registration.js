@@ -5,6 +5,12 @@ const model = require('../../MongoDB/model');
 app.use(express.json());
 
 
+
+router.get('/' , (req , res , next)=>{
+
+    res.render('sign-up');
+});
+
 router.post('/' , [express.json()],(req , res , next)=>{
     // console.log(req.body);
     const user = new model.User(req.body)

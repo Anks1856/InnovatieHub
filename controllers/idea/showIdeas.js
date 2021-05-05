@@ -7,18 +7,14 @@ const model = require('../../MongoDB/model');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-router.get('/' , (req , res , next)=>{
-    // console.log(req.body);
-    model.Idea.find(req.body)
-    .then(result =>{
-        console.log(result);
-        res.render('search-ideas');
-        next();
-    }).catch(err =>{
+router.get('/', (req , res , next)=>{
+    model.Idea.find({}).exec().then(ideas =>{
+        console.log('get ideas');
+        res.render('index', {ideas:ideas});
+    }).catch(err => {
         console.log(err);
-        res.send('please try again');
-    });
-    
+    }) 
+   
 });
 
 

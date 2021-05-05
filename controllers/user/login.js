@@ -9,6 +9,11 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
+router.get('/' , (req , res , next)=>{
+
+    res.render('login');
+});
+
 router.post('/' , (req , res , next)=>{
 //    console.log(req.body.userName);
 //    console.log(req.body.password);
