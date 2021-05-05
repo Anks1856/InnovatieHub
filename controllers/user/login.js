@@ -21,7 +21,9 @@ router.post('/' , (req , res , next)=>{
        
         if(result.email == req.body.userName && result.password == req.body.password){
             // res.send('you rae successfully login');
-            res.redirect('/');
+            localStorage.setItem('id', result.email);
+            console.log(localStorage.getItem(id));
+            res.redirect('/idea/find');
             next();
         }
         else{
@@ -30,6 +32,8 @@ router.post('/' , (req , res , next)=>{
             next();
         }
         
+    }).catch(err =>{
+        console.log(err);
     })
 
 });

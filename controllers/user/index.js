@@ -11,6 +11,6 @@ router.get('/' , (req , res , next)=>{
 });
 
 router.use('/login' , loginRouter);
-router.use('/register' , registerRouter)
+router.use('/register',registerRouter)
 
 module.exports = router;

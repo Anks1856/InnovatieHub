@@ -5,7 +5,6 @@ const model = require('../../MongoDB/model');
 app.use(express.json());
 
 
-
 router.get('/' , (req , res , next)=>{
 
     res.render('sign-up');
@@ -16,7 +15,7 @@ router.post('/' , [express.json()],(req , res , next)=>{
     const user = new model.User(req.body)
     user.save().then(result =>{
         console.log(result);
-        res.redirect('/login.html')
+        res.redirect('/user/login')
         next();
     }).catch(err =>{
         if(err) throw err;
