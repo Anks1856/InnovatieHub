@@ -1,5 +1,5 @@
 <%- include('pages/header'); -%>
-<link rel="stylesheet" href="../css/add-idea.css">	
+<link rel="stylesheet" type="text/css" href="../css/add-idea.css">	
 <%- include('pages/nav'); -%>
 
 <!-- Top Content -->
@@ -66,7 +66,7 @@
 											<img src="../images/Front_images/upload-file.png" class="img-responsive img-fluid" />
 											<p>Upload a Picture</p>
 										</label>
-										<input id="display_picture" name="displayPic" type="file" accept="image/*" />
+										<input id="display_picture" name="img" type="file" accept="image/*" />
 										<div id="display_picture_filename"></div>
 									</div>
 								</div>
@@ -84,10 +84,16 @@
 								<label class="form-label">Category *</label>
 								<select class="myInput" id="category" name="category" required>
 									<option selected disabled>Select your category</option>
-									<option>GTU</option>
-									<option>VNSGU</option>
-									<option>GU</option>
-									<option>Parul</option>
+													<option>Art</option>
+													<option>Food</option>
+													<option>Decoration</option>
+													<option>Tech</option>
+													<option>Study</option>
+													<option>Company</option>
+													<option>Schools</option>
+													<option>office</option>
+													<option>NGO</option>
+													<option>Organigation</option>
 									
 								</select>
 							</div>

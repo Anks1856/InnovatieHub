@@ -44,9 +44,14 @@
 
 
               <% ideas.forEach(function(idea) { %>
-                
+
                   <div class="card mb-5">
-                    <img src="../images/innovative_image/1a1747dd-e88c-4960-92e8-70287431c9e8.jpg" class="card-img-top post-img" alt="...">
+                  <img src="/uploads/<%= idea.img %>" />
+                  <video width="320" height="240" controls autoplay muted>
+                    <source src="/uploads/<%= idea.video %>" type="video/mp4">
+                  </video>
+                   
+                    <!-- <img src="" class="card-img-top post-img" alt="..."> -->
                     <div class="card-body">
                         <div class="row">
                             <h5 class="card-title"><%=  idea.title %>
@@ -74,7 +79,7 @@
                             </div>
                             </h5>
                     </div>
-                    <p class="card-text"><%=  idea.description %><span><a class="td" href="idea-details1.html">read more.....</a></span></p>
+                    <p class="card-text"><%=  idea.description %><span><a class="td" href="/idea/show/<%= idea.id %>/details">read more.....</a></span></p>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
