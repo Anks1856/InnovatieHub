@@ -15,7 +15,7 @@ var multer = require('multer');
 
 var storage = multer.diskStorage({
 	destination: (req, file, cb) => {
-		cb(null, 'uploads')
+		cb(null, 'views/uploads')
 	},
 	filename: (req, file, cb) => {
 		cb(null, file.fieldname + '-' + Date.now())
@@ -29,14 +29,14 @@ router.get('/' , (req , res , next)=>{
 
     res.render('add-ideas');
 });
-router.post('/' , upload.fields([{name : 'displayPic' },{ name : 'video'} ]) ,(req , res , next)=>{
+router.post('/' , upload.fields([{name : 'img' },{ name : 'video'} ]) ,(req , res , next)=>{
     console.log(req.body);
-    // console.log(req.files.video[0].fieldname);
+    console.log(req.files.img[0].filename);
     const obj = {
         title : req.body.title,
-        displayPic : fs.readFileSync(path.join(__dirname + '/../../uploads/'+ req.files.displayPic[0].filename)),
+        img : req.files.img[0].filename,
         category : req.body.category,
-        video : fs.readFileSync(path.join(__dirname + '/../../uploads/'+ req.files.video[0].filename)),
+        video  :  req.files.video[0].filename,
         description : req.body.description,
         sellable : req.body.sellable ,
         sellPrice : req.body.sellPrice ,
@@ -50,7 +50,7 @@ router.post('/' , upload.fields([{name : 'displayPic' },{ name : 'video'} ]) ,(r
 
     contact.save().then(result =>{
         // console.log(result);
-        res.redirect('/idea-details1.html');
+        res.redirect('/../../idea/show');
         next();
     }).catch(err =>{
         console.log(err);

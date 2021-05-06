@@ -16,12 +16,8 @@ const contactSchema = new mongoose.Schema({
 
 const ideaSchema = new mongoose.Schema({
     title : String,
-    displayPic : {
-        data : Buffer , 
-        contentType : String   
-    },
+    img : String,
     category : String ,
-    
     video : String ,
     description : String ,
     sellable : Boolean ,

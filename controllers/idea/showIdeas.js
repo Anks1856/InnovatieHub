@@ -10,7 +10,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 router.get('/', (req , res , next)=>{
     model.Idea.find({}).exec().then(ideas =>{
         console.log('get ideas');
+        console.log(ideas.img);
         res.render('index', {ideas:ideas});
+    }).catch(err => {
+        console.log(err);
+    }) 
+   
+});
+router.get('/:id/details', (req , res , next)=>{
+    model.Idea.findOne({_id : req.params.id}).exec().then(ideas =>{
+        console.log('get idea');
+        // console.log(ideas);
+        res.render('idea-details1', {ideas:ideas});
     }).catch(err => {
         console.log(err);
     }) 
