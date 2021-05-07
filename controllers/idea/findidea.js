@@ -11,18 +11,16 @@ router.get('/' , (req , res , next) => {
     res.render('search-ideas')
 } )
 
-router.post('/' , (req , res , next)=>{
+router.get('/' , (req , res , next)=>{
     // console.log(req.body);
-    
-    model.Idea.find(req.body)
-    .then(result =>{
-        console.log(result);
-        res.render('search-ideas');
-        next();
-    }).catch(err =>{
+    model.Idea.find({}).sort({$natural: -1}).exec().then(ideas =>{
+        console.log('get ideas');
+      
+        res.render('search-ideas', {ideas:ideas});
+    }).catch(err => {
         console.log(err);
-        res.send('please try again');
-    });
+    }) 
+    
     
 });
 

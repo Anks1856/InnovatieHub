@@ -20,6 +20,13 @@ const ideaSchema = new mongoose.Schema({
     category : String ,
     video : String ,
     description : String ,
+    publishedDate : {
+        type : Date,
+        default : new Date()
+    },
+    authorName : String ,
+    country : String ,
+    implPro : Boolean,
     sellable : Boolean ,
     sellPrice : Number ,
     BankName : String ,
