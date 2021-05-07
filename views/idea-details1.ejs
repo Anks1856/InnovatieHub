@@ -111,14 +111,21 @@
 
 					<div id="left">
 						<div id="book-front">
-							<img src="/images/innovative_image/1a1747dd-e88c-4960-92e8-70287431c9e8.jpg" alt="">
+							<img src="/uploads/<%= ideas.img %>" />	
 						</div>
 					</div>
 					<div id="right">
 						<h2 class="heading"><%=  ideas.title %></h2>
-						<h4 class="heading">Art</h4>
-						<p class="pera">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet voluptatum praesentium quod, quaerat adipisci dolores nemo officiis aperiam? Adipisci quibusdam magni, illum,</p>
-						<a class="btn" href="" role="button" id="download-btn">Buy Now / $15</a>
+						<h4 class="heading"><%=  ideas.category %></h4>
+						<p class="pera"><%=  ideas.description %></p>
+						<a class="btn" href="/<%=  ideas.sellPrice  %>/payment" role="button"
+						 id="download-btn">
+						 Buy  Rs.<% if (ideas.sellPrice != null){ %>
+							<%=  ideas.sellPrice  %> 
+						  <% } else{ %>  
+							0
+						 <% } %>
+						  </a>
 					</div>
 				</div>
 
@@ -140,13 +147,13 @@
 
 						<div class="col-md-6 col-sm-6 right text-right">
 
-							<p class="text">mr. richerd brown</p>
-							<p class="text">united state</p>
+							<p class="text"><%=  ideas.authorName %></p>
+							<p class="text"><%=  ideas.country %></p>
 							<p class="text">101</p>
 							<p class="text">248705</p>
-							<p class="text">YES</p>
+							<p class="text"><%=  ideas.implPro %></p>
 							<p class="text">277</p>
-							<p class="text">november 25 2020</p>
+							<p class="text"><%=  ideas.publishedDate.toDateString() %></p>
 							<p class="text">
 								<!-- Stars -->
 								<img class="star" src="/images/Front_images/star.png" alt="Star">
@@ -178,9 +185,10 @@
 						
 						<!-- Video -->
 						<video width="100%" height="250px" autoplay muted controls>
-							<source src="/images/videos/production ID_3703474.mp4" type="video/mp4">
+							<source src="/uploads/<%= ideas.video %>" type="video/mp4">
 							
 						</video>
+						
 						<!-- Video end -->
 
 							<p style=" height:250px; overflow: scroll; margin-top:30px; background: rgba(0,0,0,.1) ;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ducimus aliquid repellat, ea facere et quia aperiam officiis itaque magni corporis ullam porro. Culpa odit facilis, fuga rerum, neque repellat vel officiis ducimus aspernatur deleniti itaque necessitatibus provident laboriosam dolorem dolore at error porro? Necessitatibus, sunt iste aut deleniti dolorum id iure alias esse soluta doloremque laborum deserunt asperiores autem placeat, velit vitae inventore ducimus saepe. Necessitatibus facere vel quas cupiditate. Iure cumque dolor in tempora totam fugit beatae earum dolorem nobis libero ea praesentium vero, quisquam natus soluta, illum, alias perferendis dolores explicabo? Dolores autem omnis quia repellendus! Aspernatur neque est voluptates nemo tempore facilis eligendi officia molestiae quasi voluptate quidem vel, modi odio quibusdam inventore esse. Quis, tempore repellat. Enim nulla possimus amet asperiores mollitia, veniam qui natus eum cumque dignissimos voluptas ex distinctio atque rem iusto eius? Tempore magni voluptatem nam. Facilis amet laudantium vitae, minus reiciendis delectus quas quod tempore enim itaque numquam autem. Voluptas commodi, adipisci ullam accusamus quos nisi praesentium ducimus non quis magnam, corporis labore sed delectus ea unde! Atque itaque consequatur facilis.</p>

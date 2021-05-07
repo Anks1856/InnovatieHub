@@ -59,14 +59,14 @@
 								</div>
 								
 								<div class="form-group ">
-									<label class="form-label">Display Picture</label>
+									<label class="form-label">Display Picture *</label>
 
 									<div class="image-upload">
 										<label class="myInput text-center" for="display_picture">
 											<img src="../images/Front_images/upload-file.png" class="img-responsive img-fluid" />
 											<p>Upload a Picture</p>
 										</label>
-										<input id="display_picture" name="img" type="file" accept="image/*" />
+										<input id="display_picture" name="img" type="file" accept="image/*" required/>
 										<div id="display_picture_filename"></div>
 									</div>
 								</div>
@@ -99,14 +99,14 @@
 							</div>
 								
 								<div class="form-group">
-									<label class="form-label">Upload Videos </label>
+									<label class="form-label">Upload Videos *</label>
 
 									<div class="image-upload">
 										<label class="myInput text-center" for="video">
 											<img src="../images/Front_images/upload-file.png" class="img-responsive img-fluid" />
 											<p>Upload your video </p>
 										</label>
-										<input id="video" name="video" type="file"  accept=".mp4" />
+										<input id="video" name="video" type="file"  accept=".mp4" required/>
 										<div id="video_filename"></div>
 									</div>
 
@@ -126,9 +126,55 @@
 					</div>
 					
 				</div>
+				<!-- form 2 -->
+                <div class="row">
+
+					<div class="col-md-12 col-sm-12">
+						<div class="text-left">
+							<h2 class="heading" style="margin-top: 60px">Users Information</h2>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-sm-12">
+						
+						<div class="user-profile-left">
+
+								
+							<div class="form-group">
+								<label class="form-label">User Name *</label>
+								<input class="myInput" placeholder="Enter your name" type="text" id="authorName" name="authorName" value="" required>
+							</div>
+							
+				            <div class="form-group">
+								<label class="form-label">Implementation Provided? *</label>
+								<select class="myInput" id="implPro" name="implPro" required>
+									<option selected disabled>Select your type</option>
+									<option value="yes">YES</option>
+									<option value="no">NO</option>
+								</select>
+							</div>	
+								
+						</div>
+						
+					</div>
+
+					<div class="col-md-6 col-sm-12">
+						
+						<div class="user-profile-right">
+
+							<div class="form-group">
+								<label class="form-label">Country *</label>
+								<input class="myInput" placeholder="Enter your account number" type="text" id="country" name="country" value="" required>
+							</div>
+								
+						</div>
+						
+					</div>
+					
+				</div>
 
 		
-		        <!-- form 2 -->
+		        <!-- form 3 -->
 		        
 				<div class="row">
 
@@ -201,7 +247,7 @@
 
 							<div class="form-group">
 								<label class="form-label">Account Number*</label>
-								<input class="myInput" placeholder="Enter your account number" type="text" id="account_no" name="AccountNumber" >
+								<input class="myInput" placeholder="Enter your account number" type="number" id="account_no" name="AccountNumber" >
 							</div>
 
 							<div class="form-group">

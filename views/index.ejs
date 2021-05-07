@@ -47,9 +47,7 @@
 
                   <div class="card mb-5">
                   <img src="/uploads/<%= idea.img %>" />
-                  <video width="320" height="240" controls autoplay muted>
-                    <source src="/uploads/<%= idea.video %>" type="video/mp4">
-                  </video>
+                  
                    
                     <!-- <img src="" class="card-img-top post-img" alt="..."> -->
                     <div class="card-body">
@@ -79,8 +77,8 @@
                             </div>
                             </h5>
                     </div>
-                    <p class="card-text"><%=  idea.description %><span><a class="td" href="/idea/show/<%= idea.id %>/details">read more.....</a></span></p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <p class="card-text"><%=  idea.description.slice(0 ,100) %><span><a class="td" href="/idea/show/<%= idea.id %>/details">  read more.....</a></span></p>
+                    <p class="card-text"><small class="text-muted">Published on <%=  idea.publishedDate.toDateString() %></small></p>
                     </div>
                 </div>
                   
@@ -90,54 +88,6 @@
               <!-- demo -->
 
               
-                <!-- Card 1 -->
-                <a href="idea-details1.html" style="text-decoration: none;"><div class="card mb-5">
-                    <img src="../images/innovative_image/1a1747dd-e88c-4960-92e8-70287431c9e8.jpg" class="card-img-top post-img" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Post 1</h5>
-                      <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere blanditiis ducimus illum voluptates, deleniti odio qui impedit quod, harum ut, numquam autem sunt quos! Quae illo sed est id dolorum.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                </a>
-                
-
-                 <!-- Card 2 -->
-
-                 <a href="idea-details1.html" style="text-decoration: none;">
-                   <div class="card mb-5">
-                  <img src="../images/innovative_image/water-and-bleach-lamp-759x425.jpg" class="card-img-top post-img" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Post 2</h5>
-                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere blanditiis ducimus illum voluptates, deleniti odio qui impedit quod, harum ut, numquam autem sunt quos! Quae illo sed est id dolorum.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </a>
-                
-                <!-- Card 3 -->
-
-                <a href="idea-details1.html" style="text-decoration: none;"><div class="card mb-5">
-                  <img src="../images/innovative_image/3D-Sphere-Bookshelf-1-759x500.jpg" class="card-img-top post-img" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Post 3</h5>
-                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere blanditiis ducimus illum voluptates, deleniti odio qui impedit quod, harum ut, numquam autem sunt quos! Quae illo sed est id dolorum.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </a>
-
-                <!-- Card 4 -->
-
-                <a href="idea-details1.html" style="text-decoration: none;"><div class="card mb-5">
-                  <img src="../images/innovative_image/Death-star-clock-759x500.jpg" class="card-img-top post-img" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Post 4</h5>
-                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere blanditiis ducimus illum voluptates, deleniti odio qui impedit quod, harum ut, numquam autem sunt quos! Quae illo sed est id dolorum.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </a>
                   
 
             </div>
@@ -150,86 +100,22 @@
                 <h1 class="text-center">latest Posts</h1>
 
                 <hr>
-
+                <% threeIdeas.forEach(function(idea) { %>
                 <!-- Post 1 -->
-                <a href="idea-details1.html" style="text-decoration: none;">
+                
                 <div class="card mb-3" style="width: 18rem;">
-                    <img src="../images/usb-rechargeable-batteries1.jpg" class="card-img-top" alt="...">
+                  <img src="/uploads/<%= idea.img %>" class="card-img-top" />
+                    <!-- <img src="../images/usb-rechargeable-batteries1.jpg" class="card-img-top" alt="..."> -->
                     <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text"><%=  idea.description.slice(0,50) %><span><a class="td" href="/idea/show/<%= idea.id %>/details">  read more.....</a></span></p>
                     </div>
                   </div>
-                </a>
+               
+                <% });  %>
+                 
 
-                  <!-- Post 2 -->
-                  <a href="idea-details1.html" style="text-decoration: none;">
-                  <div class="card mb-3" style="width: 18rem;">
-                    <img src="../images/steps-with-slides.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                  </div>
-                </a>
-
-                  <!-- Post 3 -->
-                  <a href="idea-details1.html" style="text-decoration: none;">
-                <div class="card mb-3" style="width: 18rem;">
-                  <img src="../images/innovative_image/Sugar-Skull-Succulents-759x450.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-              </a>
-
-                <!-- Post 4 -->
-                <a href="idea-details1.html" style="text-decoration: none;">
-                <div class="card mb-3" style="width: 18rem;">
-                  <img src="../images/innovative_image/1a1747dd-e88c-4960-92e8-70287431c9e8.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-              </a>
-
-                <!-- Post 5 -->
-                <a href="idea-details1.html" style="text-decoration: none;">
-                <div class="card mb-3" style="width: 18rem;">
-                  <img src="../images/innovative_image/water-and-bleach-lamp-759x425.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-              </a>
-
-                <!-- Post 6 -->
-                <!-- <a href="note-details1.html" style="text-decoration: none;">
-                <div class="card mb-3" style="width: 18rem;">
-                  <img src="../images/steps-with-slides.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-              </a> -->
-
-                <!-- Post 7 -->
-                <!-- <a href="note-details1.html" style="text-decoration: none;">
-                <div class="card mb-3" style="width: 18rem;">
-                  <img src="../images/usb-rechargeable-batteries1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-              </a> -->
-
-                <!-- Post 8 -->
-                <!-- <a href="note-details1.html" style="text-decoration: none;">
-                <div class="card mb-3" style="width: 18rem;">
-                  <img src="../images/steps-with-slides.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-              </a> -->
+                 
+                
 
             </div>
         <!-- </div> -->
